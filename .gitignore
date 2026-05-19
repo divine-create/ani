@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Environment — never commit secrets
+backend/.env
+frontend/.env.local
+.env
+.env.*
+!.env.example
+
+# Node
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# DB / uploads
+*.db
+*.sqlite
+/tmp/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Logs
+*.log
+nohup.out
+backend/credentials.json
+backend/token.json

@@ -1,16 +1,8 @@
 'use client'
-import { useState } from 'react'
 import { signIn } from 'next-auth/react'
-import { Sparkles, Mail, Shield, Zap, PlayCircle } from 'lucide-react'
+import { Sparkles, Mail, Shield, Zap } from 'lucide-react'
 
 export default function LoginPage() {
-  const [demoLoading, setDemoLoading] = useState(false)
-
-  async function handleDemo() {
-    setDemoLoading(true)
-    await signIn('demo', { callbackUrl: '/dashboard' })
-  }
-
   return (
     <div className="min-h-screen bg-[#0a0f1e] flex items-center justify-center px-4">
       <div className="w-full max-w-sm">
@@ -40,25 +32,6 @@ export default function LoginPage() {
             </svg>
             Sign in with Google
           </button>
-
-          <div className="flex items-center gap-3 my-4">
-            <div className="flex-1 h-px bg-white/10" />
-            <span className="text-xs text-gray-600">or</span>
-            <div className="flex-1 h-px bg-white/10" />
-          </div>
-
-          <button
-            onClick={handleDemo}
-            disabled={demoLoading}
-            className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-indigo-600/20 hover:bg-indigo-600/30 border border-indigo-500/30 text-indigo-300 font-semibold rounded-xl transition-all active:scale-[0.98] disabled:opacity-60"
-          >
-            <PlayCircle size={16} />
-            {demoLoading ? 'Loading demo…' : 'Try Demo — no sign-in needed'}
-          </button>
-
-          <p className="text-xs text-gray-600 text-center mt-3">
-            Demo includes pre-loaded emails, tasks, and meeting briefs
-          </p>
         </div>
 
         {/* Feature hints */}

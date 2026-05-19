@@ -123,18 +123,6 @@ See `backend/.env.example` for the full list.
 
 ---
 
-## Demo Mode
-
-Hit **Try Demo** on the login page for an instant tour with no setup:
-
-- 8 pre-loaded messages (urgent NDA, investor email, WhatsApp, auto-handled routines)
-- 5 tasks extracted from emails
-- 3 calendar events with AI-generated meeting briefs
-- A pre-processed meeting recording with extracted action items and draft emails
-- Morning briefing with daily insight
-
----
-
 ## Meeting Intelligence
 
 Upload any meeting recording (MP3, MP4, M4A, WAV, OGG, WebM) to the **Meeting Intel** tab. Gemini 2.0 Flash listens to the full recording and automatically:

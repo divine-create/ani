@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 
-from api.routes import briefing, inbox, calendar, tasks, reviews, approve, settings, stream, stats, search, auth as auth_routes, oauth as oauth_routes, demo as demo_routes, meetings as meeting_routes
+from api.routes import briefing, inbox, calendar, tasks, reviews, approve, settings, stream, stats, search, auth as auth_routes, oauth as oauth_routes, meetings as meeting_routes
 from api.webhooks import whatsapp, calendly
 from scheduler.jobs import start_scheduler
 from db.session import create_tables
@@ -38,7 +38,6 @@ app.include_router(stream.router,   prefix="/api", tags=["stream"])
 app.include_router(stats.router,    prefix="/api", tags=["stats"])
 app.include_router(search.router,   prefix="/api", tags=["search"])
 app.include_router(oauth_routes.router, tags=["oauth"])
-app.include_router(demo_routes.router, prefix="/api", tags=["demo"])
 app.include_router(meeting_routes.router, prefix="/api", tags=["meetings"])
 app.include_router(whatsapp.router, prefix="/webhooks", tags=["webhooks"])
 app.include_router(calendly.router, prefix="/webhooks", tags=["webhooks"])
